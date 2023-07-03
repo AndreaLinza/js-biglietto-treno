@@ -10,9 +10,9 @@ body{
 }
 
 #distKm::after{
-    content: "km";
+    content: " km";
 }
 
 #price::after{
-    content: "€";
+    content: " €";
 }

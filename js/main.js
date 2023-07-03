@@ -9,9 +9,6 @@ const price = parseInt((distKm * 0.21));
 
 // console.log(price);
 
-
-
-
 const priceYoung = price - (price * 0.2);
 const priceYoungDecimal = priceYoung.toFixed(2)
 
@@ -20,23 +17,23 @@ const priceYoungDecimal = priceYoung.toFixed(2)
 const priceOld = price - (price * 0.4);
 const priceOldDecimal = priceOld.toFixed(2)
 
-// console.log(priceOldDecimal);
+document.getElementById("distKm").innerHTML = `${distKm}`;
+document.getElementById("userAge").innerHTML = `${userAge}`;
 
 if (userAge <= 18) {
-    document.getElementById("distKm").innerHTML = `${distKm}`;
-    document.getElementById("userAge").innerHTML = `${userAge}`;
     document.getElementById("price").innerHTML = `${priceYoungDecimal}`;
     // console.log("Sei piccolo");
     
 }else if(userAge >= 65) {
-    document.getElementById("distKm").innerHTML = `${distKm}`;
-    document.getElementById("userAge").innerHTML = `${userAge}`;
     document.getElementById("price").innerHTML = `${priceOldDecimal}`;
     // console.log("Sei Vecchio")
 }else {
-    document.getElementById("distKm").innerHTML = `${distKm}`;
-    document.getElementById("userAge").innerHTML = `${userAge}`;
     document.getElementById("price").innerHTML = `${price}`;
     // console.log("Sei Maggiorenne")
 }
 
+// const date = new Date();
+// const currentDay = date.getDate();
+// const currentMonth = date.getUTCMonth() + 1;
+// const currentYear = date.getFullYear();
+// const currentDate =  ${currentDay}/${currentMonth}/${currentYear}
